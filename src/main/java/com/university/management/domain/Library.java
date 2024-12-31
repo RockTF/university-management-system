@@ -1,17 +1,16 @@
 package com.university.management.domain;
 
 import java.util.List;
-import java.util.Map;
 
 public class Library {
     private int id;
     private List<Book> books;
-    private Map<Student, Book> borrowers;
+    private List<Transaction> transactions;
 
-    public Library(int id, List<Book> books, Map<Student, Book> borrowers) {
+    public Library(int id, List<Book> books, List<Transaction> transactions) {
         this.id = id;
         this.books = books;
-        this.borrowers = borrowers;
+        this.transactions = transactions;
     }
 
     public int getId() {
@@ -30,11 +29,11 @@ public class Library {
         this.books = books;
     }
 
-    public Map<Student, Book> getBorrowers() {
-        return borrowers;
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 
-    public void setBorrowers(Map<Student, Book> borrowers) {
-        this.borrowers = borrowers;
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
     }
 }
